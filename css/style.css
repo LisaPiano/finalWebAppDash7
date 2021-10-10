@@ -1,0 +1,900 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* 
+OVERALL STYLES
+  _____________________________________________________
+   */
+  /* Style for HEADER and NAV as GRID */ 
+
+  
+  h3 {
+    padding-left: 34px; 
+    padding-bottom: 20px; 
+    padding-top: 30px; 
+    text-align: left; 
+  }
+
+  .grid-container {
+    display: grid; 
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto; 
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main";
+  }
+/* ---------------------HEADER---------------------------- */
+  .header {
+    grid-area: header;
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: space-evenly; 
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    height: 60px; 
+    width: 100%; 
+    background-color: rgb(66, 103, 178);
+    opacity: 100%;
+    color: white; 
+  }
+  .rightColumn {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center; 
+  }
+  
+  .webapp { 
+    font-size:7px; 
+    padding-left: 8px; 
+    width: 105px; 
+  }
+  
+ .circle {
+   border-radius: 50%;
+   background-color: greenyellow; 
+   height: 9px; 
+   width: 9px; 
+   margin-bottom: 28px; 
+   margin-left: 10px; 
+   
+ }
+
+  .bell-icon {
+    padding-top: 45px; 
+    padding-left: 2px; 
+    /* margin-left: 28px; s */
+    margin-right: -11px; 
+  }
+
+  .bell:hover {
+    transform: rotate(90deg);
+    fill: red; 
+  }
+
+  .bell {
+    transition: transform .5s ease-out; 
+    margin-bottom: 35px;
+  }
+
+  .choose {
+    display: none; 
+  }
+
+    .first-face img {
+      border-radius: 50%; 
+      border: black; 
+      height: 40px;
+      width: 40px; 
+      margin-top: 12px; 
+      transition: transform 2s; 
+  }
+
+  .first-face img:hover {
+    transform: rotate(90deg);
+  }
+   .line {
+    background-color: white;  
+    width: 1px; 
+    margin-top: 9px; 
+    margin-left: 16px;
+    margin-right: 16px; 
+    opacity: 60%; 
+    height: 35px; 
+     padding-top: 40px; 
+  }
+  .student-name{
+    font-size: 8px; 
+     padding-left: 18px; 
+  }
+
+  /* ________________________________NAV_____________________________  */
+  
+  .nav {
+    grid-area: nav;
+    height: 60px; 
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
+    padding-left: 40px; 
+    padding-right: 40px; 
+    align-items: center;
+    background-color: midnightblue;
+    opacity: 80%;
+  }
+
+  .bell-icon,
+  .home-icon,
+  .bar-icon,
+  .members-icon,
+  .settings-icon {
+    fill: white; 
+  }
+
+  /* ___________________________MAIN_____________ */
+
+  .main {
+    grid-area: main;
+    font-family: 'Roboto', sans-serif;
+  }
+/* ___________________________Dashboard and Search_____________ */
+  
+.dashboard-and-search {
+  display: flex; 
+  flex-wrap: nowrap; 
+  justify-content: space-between; 
+
+}
+.dashboard-text {
+  padding-top: 15px;
+  padding-left: 20px; 
+}
+
+.search {
+  padding-left: 11px; 
+}
+
+.search-placeholder {
+  height: 40px; 
+  width: 100%; 
+  padding-left: 40px; 
+  padding-top: 20px; 
+  padding-bottom: 35px; 
+  margin-bottom: 23px; 
+  background-color: #e0e0e0;
+  opacity: 40%; 
+  font-size: 20px; 
+  border: 2px solid lightslategray; 
+}
+/* ___________________________Alert_____________ */
+
+.alert {
+  display: grid; 
+  grid-template-columns: 80% 20%; 
+  grid-template-rows: 17px; 
+  padding: 17px 15px 24px; 
+  width: 90%; 
+  background-color: rgb(66, 103, 178);
+  color: white; 
+  text-align: left; 
+  font-size: 14px; 
+  margin-left: 20px; 
+  border-radius: 12px; 
+  opacity: 70%; 
+}
+
+.p {
+  text-align: right; 
+}
+
+
+/* _______________TrafficHeadings   traffic-nav_____________ */
+
+.traffic-nav {
+  display: grid; 
+  grid-template-columns: 25% 25% 25% 25%; 
+  grid-template-rows: 40px; 
+  list-style-type: none; 
+} 
+.trafficText {
+  padding-left: 20px; 
+}
+
+.decoration {
+  background-color: rgba(10, 197, 10, 0.61);
+  opacity: 0.85;
+  color: white;
+  border-radius: 24px;
+}
+
+.traffic-nav li {
+  padding-top: 8px; 
+  text-align: center; 
+  font-weight: bold;
+}
+
+.wrapperLine {
+  display: grid; 
+  grid-template-columns: 100%; 
+  align-items: center; 
+}
+
+.traffic-nav-hourly {
+  margin-left: 20px; 
+}
+ 
+.wrapperBar,
+.wrapperDoughnut,
+.wrapperLine {
+    padding-left: 20px; 
+    padding-bottom: 10px; 
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.wrapperLine {
+  padding-left: 10px; 
+  padding-top: 18px; 
+}
+    
+
+   
+/* _______________Social Stats_____________ */
+
+.facebook,
+.instagram,
+.twitter {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(0, 139, 127); 
+    padding: 30px;
+    background-color: rgb(244, 249, 252);
+    margin: 12px; 
+    padding-right: 72px; 
+    height: 110px; 
+    width: 97%; 
+    padding-bottom: 102px;
+}
+
+.social-text h4{
+  color:  rgb(104, 129, 238);
+  font-size: 15px;
+  padding-left: 30px; 
+}
+
+.social-text p {
+  font-size: 28px;
+  padding-left: 29px;
+}
+
+.social-image {
+  border-radius: 50%;
+  height: 63px;
+  width: 66px; 
+  background-color:  rgb(66, 103, 178);
+}
+
+#instagram, 
+#facebook,
+#twitter {
+  fill:white; 
+   height: 42px;
+   width: 62px; 
+   transform: translate(2px, 11px);
+}
+
+
+
+/* _______________newMembers and RecentActivity____________ */
+
+
+
+.newMembersAndRecentActivityOne {
+  display: grid; 
+  grid-template-columns: 100%; 
+  text-align: center; 
+  grid-template-areas:
+  "newMembers"
+  "victoriaOne"
+  "daleOne"
+  "dawnOne"
+  "danOne"
+}
+
+.newMembersAndRecentActivityTwo {
+  display: grid; 
+  grid-template-columns: 100%; 
+  text-align: center; 
+  grid-template-areas:
+  "recentActivity"
+  "victoriaTwo"
+  "daleTwo"
+  "dawnTwo"
+  "danTwo"
+}
+
+.newMembers {
+  grid-area: newMembers; 
+}
+
+.recentActivity {
+  grid-area: recentActivity;
+}
+
+.victoriaOne {
+  grid-area: victoriaOne; 
+}
+
+.victoriaTwo {
+  grid-area: victoriaTwo; 
+}
+
+.daleOne {
+  grid-area: daleOne;
+}
+
+.daleTwo {
+  grid-area: daleTwo;
+}
+
+.dawnOne {
+  grid-area: dawnOne;
+}
+
+.dawnTwo {
+  grid-area: dawnTwo;
+}
+
+.danOne {
+  grid-area: danOne;
+}
+
+.danTwo {
+  grid-area: danTwo; 
+} 
+
+.memPhoto,
+.memberText {
+  justify-content: center; 
+  padding-right: 5px; 
+}
+
+.memberPhoto {
+  border-radius: 50%; 
+  width: 60px; 
+  height: 60px; 
+}
+
+.mem {
+  padding-bottom: 20px; 
+  padding-top: 20px; 
+  border-bottom: 1px solid lightgray;
+}
+
+a {
+  text-decoration: none; 
+}
+
+/* ______________________messageUserSettingsForm_____ */
+
+.messageUserSettingsForm {
+  display: grid; 
+  grid-template-columns: 100%; 
+  grid-template-rows: auto; 
+}
+
+.searchForUser,
+.messageForUser,
+.send {
+  width: 90%; 
+  margin-left: 20px; 
+  margin-bottom: 30px; 
+  padding-left: 20px; 
+  border: 1px solid gray; 
+}
+
+.searchForUser {
+  background-color: #e0e0e0; 
+  opacity: 50%; 
+}
+
+.searchForUser,
+.send {
+  height: 40px; 
+}
+
+.messageForUser {
+  height: 100px; 
+  background-color: #e0e0e0; 
+  opacity: 50%; 
+  padding-bottom: 50px; 
+}
+
+.send {
+  background-color: rgb(66, 103, 178);
+  color: white; 
+}
+
+.messageForUser::placeholder {
+  color: black; 
+}
+
+/* _________SETTINGS and TOGGLE BUTTONS_____ */
+
+
+.toggleOnOff {
+  width: 60%; 
+  padding-left: 20px; 
+}
+#email,
+#profile {
+  font-size: 12px; 
+  width: 160px; 
+}
+
+.off {
+  font-size: 10px; 
+  padding-left: 30px; 
+}
+
+.on {
+  font-size: 10px; 
+  padding-left: 5px; 
+}
+.switchWords {
+  display: flex; 
+  align-items: center; 
+  padding-top: 7px; 
+  padding-left: 10px; 
+  width: 234px; 
+  margin-bottom: 20px;
+}
+
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+input.cmn-toggle-round + label {
+  color: #fff; 
+  width: 72px;
+  height: 29px;
+  background-color: rgb(104, 129, 238);
+  border-radius: 60px;
+  border: 2px solid grey; 
+}
+/* 
+input.cmn-toggle-round + label:before, */
+input.cmn-toggle-round + label:after {
+  display: block;
+  position: absolute;
+  left: 43px;
+  bottom: 1px;
+  content: "";
+  padding-bottom: 15px; 
+}
+
+input.cmn-toggle-round + label:before {
+  display: block;
+  position: absolute;
+  right: 1px;
+  background-color:  rgb(104, 129, 238);
+  border-radius: 60px;
+  transition: background 0.4s;
+  padding-left: 10px; 
+}
+
+input.cmn-toggle-round + label:after {
+  width: 20px;
+  height: 5px; 
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: margin 0.4s;
+  border: 2px solid grey; 
+}
+
+input.cmn-toggle-round:checked + label:before {
+  background-color: rgb(104, 129, 238);
+}
+
+input.cmn-toggle-round:checked + label:after {
+  margin-left: -45px;
+}
+
+span {
+  margin-left: -2px; 
+}
+
+
+
+/* _________SELECT_____ */
+
+select {
+width: 90%; 
+margin-left: 20px; 
+margin-top: 30px; 
+height: 40px; 
+background-color: #e0e0e0; 
+padding-right: 30px; 
+padding-left: 20px; 
+}
+
+.settings-button {
+  display: grid; 
+  grid-template-columns: 40% 40%;
+  grid-template-rows: auto; 
+  gap: 30px; 
+  padding-top: 30px; 
+  padding-bottom: 30px; 
+
+}
+
+.button-primary,
+.button-disabled {
+  height: 40px; 
+  width: 140px; 
+  margin-left: 20px; 
+  border-radius: 8px; 
+  color: #fff; 
+}
+
+.button-primary {
+  background-color:rgb(104, 129, 238);
+}
+
+.button-disabled {
+  background-color:  grey;
+}
+
+/* _______________MEDIA QUERIES___________ */
+
+/* _______________for 768px___________ */
+
+@media only screen and (min-width: 768px){
+  .grid-container {
+    display: grid; 
+    grid-template-columns: 12% auto;
+    grid-template-areas: 
+    "header header"
+    "nav main"
+  }
+
+  .header {
+    justify-content: space-between;
+  } 
+  .bell-icon {
+    margin-right: 0px; 
+  }
+
+  #ring {
+    width: 40px; 
+    height: 40px; 
+  }
+
+  .student-name {
+    padding-right: 10px; 
+  }
+
+  .first-face img{
+    height: 50px; 
+    width: 50px; 
+  }
+  /* --------------------------------------------------------- */
+  .nav {
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 100%; 
+   flex-wrap: wrap; 
+   padding-left: 5px; 
+   padding-right: 5px; 
+  }
+
+  .home-icon,
+  .bar-icon,
+  .members-icon,
+  .settings-icon {
+    padding-bottom: 20px; 
+  }
+ 
+.home-icon {
+  padding-top: 20px; 
+}
+
+.search {
+  padding-left: 11px;
+  width: 100%;
+}
+
+.alert {
+  grid-template-rows: 5px;
+}
+
+/* _______________________________________________________________
+CHARTS
+_________________________________________________________________ */
+
+.traffic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 133px; 
+}
+
+.traffic-nav {
+  grid-template-columns:25% 25% 25% 25%; 
+  column-gap: 20px; 
+  grid-template-rows: 40px; 
+}
+
+.traffic-nav {
+  padding-top: 22px; 
+  display: grid; 
+  grid-template-columns: 38% 24% 28% 25%; 
+  row-gap: 80px; 
+  grid-template-rows: 40px; 
+  list-style-type: none; 
+  font-size: 12px; 
+} 
+
+#myChartLineHourly{
+  width: 400px; 
+  height: 400px; 
+}
+
+#myChartLineHourly {
+  padding-bottom: 10px;  
+}
+
+.trafficAndMobile {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 20px; 
+}
+
+.trafficAndMobile h3 {
+  font-size: 10px; 
+  padding-left: 0; 
+}
+
+.myChartBar {
+  width: 300px; 
+}
+
+.wrapperBar,
+.wrapperDoughnut {
+  border: 1px solid grey;
+  align-self: center; 
+}
+
+.social-container{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    gap: 2px; 
+    padding-left: 15px;  
+}
+
+
+
+
+
+.social-text p,
+.social-text h4 {
+  font-size:16px;
+  padding-top: 8px; 
+  padding-left: 2px; 
+}
+
+.social-image {
+  height: 72px; 
+  width: 77px; 
+  padding-left: 10px;
+  padding-top: 43px;
+  margin-left: 4px; 
+  padding-bottom: 25px; 
+  margin-bottom: 61px; 
+}
+
+#instagram, 
+#facebook,
+#twitter {
+  fill:white; 
+   height: 42px;
+   margin: 0 auto; 
+   width: 100%;
+   transform: translate(-6px, -32px); 
+}
+
+.newMembersAndRecentActivityTwo {
+  grid-template-rows: 14% repeat(4, 99px);
+}
+
+.memPhoto {
+  padding-left: 10px; 
+}
+
+.date {
+  padding-top: 40px;
+}
+
+.memberTextOne,
+.memberText {
+  padding-left: 40px; 
+  text-align: left; 
+  padding-top: 20px; 
+}
+
+.memberText {
+  width: 450px;  
+}
+
+.victoriaOne {
+  grid-area: victoriaOne; 
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
+  }
+
+.victoriaTwo {
+  grid-area: victoriaTwo; 
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-row: auto; 
+}
+
+.daleOne {
+  grid-area: daleOne;
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
+}
+
+.daleTwo {
+  grid-area: daleTwo;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.dawnOne {
+  grid-area: dawnOne;
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
+}
+
+.dawnTwo {
+  grid-area: dawnTwo;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+
+.danOne {
+  grid-area: danOne;
+  display: grid;
+  grid-template-columns: 7% 70% 23%;
+}
+
+.danTwo {
+  grid-area: danTwo; 
+  display: grid;
+  grid-template-columns: 10% 90%;
+} 
+
+.memberPhoto {
+  border-radius: 50%; 
+  width: 60px; 
+  height: 60px; 
+  padding-left: 6px; 
+}
+
+.settings-button {
+  gap: 37px; 
+}
+
+.mem {
+  border-bottom: 1px solid lightgray; 
+}
+
+.sendButton {
+  padding-top: 30px; 
+}
+
+.send, .searchForUser {
+  height: 76px; 
+}
+
+select {
+  width: 86%;
+}
+.button-primary, .button-disabled {
+  width: 350px;
+  height: 86px; 
+}
+
+}/*END MEDIA QUERY FOR 768px____________*/
+
+/* _______________for 1024px__________ */
+
+@media only screen and (min-width: 1024px){
+  
+  .nav {
+    height: 107%;
+  }
+
+  .wrapperMembersAndActivity {
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto; 
+    grid-template-areas:
+    "newMembersAndRecentActivityOne newMembersAndRecentActivityTwo"
+  }
+
+  .newMembersAndRecentActivityOne {
+    grid-area: newMembersAndRecentActivityOne;
+      grid-template-rows:  repeat(5, 95px);
+    }
+
+  .newMembersAndRecentActivityTwo {
+    grid-area: newMembersAndRecentActivityTwo;
+    grid-template-rows:  repeat(5, 95px);
+  }
+
+  .mem {
+    padding-bottom: 0px; 
+    padding-top: 7px; 
+    border-right: 1px solid lightgray; 
+  }
+
+  .recentActivity,
+  .newMembers {
+    border-right: 1px solid lightgray; 
+  }
+
+  .messageUserSettingsForm {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px; 
+    border-right: 1px solid lightgray; 
+  }
+
+  .textarea {
+    padding-bottom: 35px; 
+  }
+
+  .rightCol {
+    border-right: 1px solid lightgray;
+  }
+
+  .send {
+    height: 70px; 
+  }
+
+  .button-primary, .button-disabled {
+    height: 70px; 
+    margin-top: 54px; 
+    width: 230px; 
+  }
+
+  select {
+    height: 60px;
+    margin-top: 32px; 
+
+  }
+
+  .settings-button {
+    padding-top: 6px; 
+  }
+  
+}
+/* End Media Queries */
